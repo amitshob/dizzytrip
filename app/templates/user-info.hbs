@@ -1,0 +1,26 @@
+
+<div class="address-panel">
+  <h2>Start Address</h2>
+
+  <form id="origin" name="origin" onsubmit="overlayDirections();return false;" method="post">
+    <div class="form-group">
+      <label for="street">Street address</label>
+      <span>{{input id="street" name="street_address" type="text"}}</span>
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <span>{{input id="city" name="city" type="text"}}</span>
+    </div>
+    <div class="address-form-column">
+      <label for="zip">Zip Code</label>
+      {{input id="zip" name="zip_code" type="text" maxlength="5" size="5"}}
+    </div>
+    <div class "button">
+      <button {{action 'submit'}}>Go!!!</button>
+    </div>
+  </form>
+
+</div>
+
+
+{{outlet}}

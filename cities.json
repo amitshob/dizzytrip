@@ -1,8 +1,60 @@
 { "cities": [{
-  "name": "New York"
+  "name": "New York",
+  "destinations": {"0": true,
+                  "1": true,
+                  "2": true,
+                  "3": true,
+                  "4": true,
+                  "5": true}
   }, {
-  "name": "San Francisco"
+  "name": "San Francisco",
+  "destinations": {"7": true}
   }, {
-  "name": "Los Angeles"
+  "name": "Los Angeles",
+  "destinations": {"8": true}
+  }],
+
+ "destinations": [{
+  "city": "0",
+  "name": "Times Square",
+  "visit_time": "2",
+  "visit_budget": "0",
+  "latitude":"40.7577",
+  "longitude":"73.9857"
+  },{
+  "city": "0",
+  "name": "Empire state building",
+  "visit_time": "2",
+  "visit_budget": "20",
+  "latitude":"40.7484",
+  "longitude":"73.9667"
+  },{
+  "city": "0",
+  "name": "central park",
+  "visit_time": "3",
+  "visit_budget": "0",
+  "latitude":"40.7833",
+  "longitude":"73.9857"
+  },{
+  "city": "0",
+  "name": "Times Square",
+  "visit_time": "2",
+  "visit_budget": "0",
+  "latitude":"40.7577",
+  "longitude":"73.9857"
+  },{
+  "city": "0",
+  "name": "Times Square",
+  "visit_time": "2",
+  "visit_budget": "0",
+  "latitude":"40.7577",
+  "longitude":"73.9857"
+  },{
+  "city": "0",
+  "name": "Times Square",
+  "visit_time": "2",
+  "visit_budget": "0",
+  "latitude":"40.7577",
+  "longitude":"73.9857"
   }]
 }

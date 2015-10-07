@@ -1,0 +1,33 @@
+
+<div id="map"></div>
+<div id="right-panel">
+
+{{#if updateRentalForm}}
+<h4>Update {{rental.owner}}'s {{rental.type}}</h4>
+<div>
+  <form>
+    <div id="city">
+      {{view "select" content=names}}
+    </div>
+
+    <div class="form-group">
+      <label for="time"></label>
+      <span>{{input value=time id="time" placeholder="How much time you got?"}}</span>
+    </div>
+
+    <div class="form-group">
+      <label for="budget"></label>
+      <span>{{input value=budget id="budget" placeholder="How much are you willing to spend?"}}</span>
+    </div>
+    <button {{action 'submit'}}>Go!!!</button>
+  </form>
+</div>
+{{else}}
+<button {{action 'updateRentalForm'}}>Update</button>
+{{/if}}
+
+</div>
+
+
+
+{{yield}}
