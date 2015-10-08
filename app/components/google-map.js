@@ -16,6 +16,17 @@ export default Ember.Component.extend({
         center:  this.get('map').center(city.get('latitude'), city.get('longitude')),
         zoom: 15
       };
+
+
+
+
+
+
+
+
+
+
+
       this.get('map').findMap(container, options);
     }
   }
