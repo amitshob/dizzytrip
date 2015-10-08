@@ -19,7 +19,6 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
-* `ember install emberx-select` - for dropdown select on home page
 
 ## Running / Development
 
