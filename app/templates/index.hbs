@@ -17,7 +17,7 @@ where do you want to start/end (gps or form)
 
 </p>
 
-<div>
+<!-- <div>
   <form>
     <div id="city">
       {{view "select" content=names}}
@@ -34,8 +34,11 @@ where do you want to start/end (gps or form)
     </div>
     <button {{action 'submit'}}>Go!!!</button>
   </form>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div> -->
+
+
+<!-- {{google-map city=city}} -->
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 <p> TBD </p>
 Map directions API
 <br>
@@ -47,6 +50,8 @@ Structure of waypoints--
 <br>
 (origin/destination (can be same for now), max six additional waypoints)
 
-{{google-map }}
+
+{{google-map cities=model}}
+
 
 {{outlet}}

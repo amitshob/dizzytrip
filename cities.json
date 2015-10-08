@@ -1,5 +1,7 @@
 { "cities": [{
   "name": "New York",
+  "longitude": "40.7127",
+  "latitude": "74.0059",
   "destinations": {"0": true,
                   "1": true,
                   "2": true,
@@ -8,9 +10,13 @@
                   "5": true}
   }, {
   "name": "San Francisco",
+  "longitude": "37.7833",
+  "latitude": "122.4167",
   "destinations": {"7": true}
   }, {
   "name": "Los Angeles",
+  "longitude": "34.0500",
+  "latitude": "118.2500",
   "destinations": {"8": true}
   }],
 

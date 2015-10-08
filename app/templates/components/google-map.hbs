@@ -1,16 +1,22 @@
 
-<div id="map"></div>
-<div id="right-panel">
+  <!-- <button {{action 'showMap' google-map}}>Show Map</button> -->
 
-{{#if updateRentalForm}}
-<h4>Update {{rental.owner}}'s {{rental.type}}</h4>
 <div>
   <form>
     <div id="city">
-      {{view "select" content=names}}
-    </div>
 
-    <div class="form-group">
+      {{#x-select value=city}}
+          <option>Select a City</option>
+        {{#each cities as |city|}}
+          {{#x-option value=city}} {{city.name}} {{/x-option}}
+        {{/each}}
+      {{/x-select}}
+
+
+    </div>
+  </form>
+  <button {{action 'showMap' city}}>Go!!!</button>
+    <!-- <div class="form-group">
       <label for="time"></label>
       <span>{{input value=time id="time" placeholder="How much time you got?"}}</span>
     </div>
@@ -18,16 +24,22 @@
     <div class="form-group">
       <label for="budget"></label>
       <span>{{input value=budget id="budget" placeholder="How much are you willing to spend?"}}</span>
-    </div>
-    <button {{action 'submit'}}>Go!!!</button>
-  </form>
-</div>
-{{else}}
-<button {{action 'updateRentalForm'}}>Update</button>
-{{/if}}
+    </div> -->
+
+    <!-- <div class="form-group">
+          <label for="latitude">Latitude</label>
+          {{input value=latitude id="latitude"}}
+        </div>
+
+        <div class="form-group">
+          <label for="longitude">Longitude</label>
+          {{input value=longitude id="longitude"}}
+        </div> -->
+    <!-- <button {{action 'showMap' city}}>Go!!!</button> -->
 
 </div>
+<div class="map=div">
 
 
-
-{{yield}}
+<div class="map-display"></div>
+</div>
