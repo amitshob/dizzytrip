@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   googleMaps: window.google.maps,
 
-  findMap(container, options) {
-    return new this.googleMaps.Map(container, options);
+  findMap(container, map) {
+    return new this.googleMaps.Map(container, map);
   },
 
   center(latitude, longitude) {
