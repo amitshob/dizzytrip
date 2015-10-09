@@ -1,4 +1,6 @@
 <!-- <button {{action 'showMap' google-map}}>Show Map</button> -->
+<div class="container-fluid">
+
 
 <div class="form-group">
   <form>
@@ -16,18 +18,21 @@
    {{input value=origin id="origin" placeholder="Where do you want to start?" class="form-control"}}
    </div>
    <div class="form-group">
-    {{input value=destination id="destination" placeholder="Where do you want to end th etrip?" class="form-control"}}
+    {{input value=destination id="destination" placeholder="Where do you want to end the trip?" class="form-control"}}
     </div>
-  </form>
-  <button {{action 'showMap'}} class="btn btn-info">Go!!!</button>
-    <!-- <div class="form-group">
-      <label for="time"></label>
-      <span>{{input value=time id="time" placeholder="How much time you got?"}}</span>
+
+    <div class="form-group">
+
+      {{input value=time_available id="time_available" placeholder="How much time you got?" class="form-control"}}
     </div>
     <div class="form-group">
-      <label for="budget"></label>
-      <span>{{input value=budget id="budget" placeholder="How much are you willing to spend?"}}</span>
-    </div> -->
+
+      {{input value=budget id="budget" placeholder="How much are you willing to spend?" class="form-control"}}
+    </div>
+
+  </form>
+  <button {{action 'showMap'}} class="btn btn-info">Go!!!</button>
+
 
     <!-- <div class="form-group">
           <label for="latitude">Latitude</label>
@@ -41,7 +46,9 @@
 
 </div>
 
-<div class="map-display"></div>
 
-
-<div id="directions-panel"></div>
+<div class="row">
+  <div class="col-xs-8 map-display"></div>
+  <div class="col-xs-4" id="directions-panel"></div>
+</div>
+</div>

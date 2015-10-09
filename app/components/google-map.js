@@ -37,11 +37,14 @@ export default Ember.Component.extend({
           var waypts = [{location: first, stopover: true}, {location: second, stopover: true},
             {location: third, stopover: true}];
           // var waypts = [destinations[0].name,destinations[1].name,destinations[2].name];
-          debugger;
+
 
          directionsService.route({
             origin: document.getElementById('origin').value,
             destination: document.getElementById('destination').value,
+
+            // budget: document.getElementById('budget').value,
+
             // origin: "89 E 42nd St, New York, NY 10017",
             // destination: "4 Pennsylvania Plaza, New York, NY 10121",
             waypoints: waypts,
@@ -52,7 +55,9 @@ export default Ember.Component.extend({
               directionsDisplay.setDirections(response);
               var route = response.routes[0];
               var summaryPanel = document.getElementById('directions-panel');
+              var time_available = document.getElementById('time_available').value;
               summaryPanel.innerHTML = '';
+              var travel_duration = 0;
               // For each route, display summary information.
               for (var i = 0; i < route.legs.length; i++) {
                 var routeSegment = i + 1;
@@ -61,7 +66,14 @@ export default Ember.Component.extend({
                 summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
                 summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
                 summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+                route.legs[i].duration;
+                travel_duration = travel_duration +route.legs[i].duration;
+                debugger;
+
+                // window.alert('hi');
               }
+
+
             } else {
               window.alert('Directions request failed due to ' + status);
             }
