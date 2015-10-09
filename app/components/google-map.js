@@ -21,7 +21,7 @@ export default Ember.Component.extend({
         //and directionsrenderer( renders directions obtained from directionsService )
 
           // setMap specifies the map on which directions will be rendered
-         directionsDisplay.setMap(map); //(throws an error)
+        //  directionsDisplay.setMap(map); //(throws an error)
           //  document.getElementById('submit').addEventListener('click', function() {
           calculateAndDisplayRoute(directionsService, directionsDisplay);
         // }); //Just execute the function above straightaway
@@ -34,8 +34,8 @@ export default Ember.Component.extend({
           var second = new google.maps.LatLng(destinations[1].latitude,destinations[1].longitude);
           var third = new google.maps.LatLng(destinations[2].latitude,destinations[2].longitude);
 
-          // waypts: [{location: first, stopover: true}, {location: second, stopover: true},
-            // {location: third, stopover: true}];
+          var waypts = [{location: first, stopover: true}, {location: second, stopover: true},
+            {location: third, stopover: true}];
           // var waypts = [destinations[0].name,destinations[1].name,destinations[2].name];
           debugger;
 
@@ -44,8 +44,7 @@ export default Ember.Component.extend({
             destination: document.getElementById('destination').value,
             // origin: "89 E 42nd St, New York, NY 10017",
             // destination: "4 Pennsylvania Plaza, New York, NY 10121",
-            waypoints: [{location: first, stopover: false}, {location: second, stopover: false},
-              {location: third, stopover: false}],
+            waypoints: waypts,
             optimizeWaypoints: true,
             travelMode: google.maps.TravelMode.DRIVING
           }, function(response, status) {
@@ -70,7 +69,7 @@ export default Ember.Component.extend({
         }
           var container = this.$('.map-display')[0];
 
-          // this.get('map').findMap(container, map);
+          this.get('map').findMap(container, map);
 
     }
 
